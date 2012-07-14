@@ -1,0 +1,85 @@
+{% extends "loggedbase.html" %}
+
+{% block title_name %}Dashboard{% endblock %}
+
+{% block actions %}
+    <h3>Actions</h3>
+    <ul>
+        <li><a href="http://127.0.0.1:8000/add_entity_form/">Add New</a></li>
+        <li><a href="">Check-ins</a></li>
+        <li><a href="">Tasks</a></li>
+        <li><a href="">Bugs</a></li>
+        <li><a href="">User stories</a></li>
+        <li><a href="">Filters</a></li>
+    </ul>
+{% endblock %}
+
+{% block dash %}
+    <article class="module width_full">
+        <header><h3>Tasks</h3></header>
+        <div class="module_content">
+        <table width="100%" cellspacing="0" cellpadding="5" border="1">
+        <tr>
+            <td>ID</td>
+            <td>Description</td>
+            <td>Priority</td>
+            <td>Assigned to (id)</td>
+            <td>Status</td>
+            <td>Creation date</td>
+            <td>Elapse date</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        {% for key, value in tasks.items %}
+            <tr>
+                <td>{{ value.id_task }}</td>
+                <td>{{ value.description }}</td>
+                <td>{{ value.priority }}</td>
+                <td>{{ value.assigned_to }}</td>
+                <td>{{ value.status }}</td>
+                <td>{{ value.creation_date }}</td>
+                <td>{{ value.elapse_date }}</td>
+                <td><a href="">new child</a></td>
+                <td><a href="">x</a></td>
+                <td><a href="">open</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+    </article>
+
+    <article class="module width_full">
+        <header><h3>Bugs</h3></header>
+        <div class="module_content">
+            <table width="100%" cellspacing="0" cellpadding="5" border="1">
+                <tr>
+                    <td>ID</td>
+                    <td>Description</td>
+                    <td>Priority</td>
+                    <td>Assigned to (id)</td>
+                    <td>Status</td>
+                    <td>Creation date</td>
+                    <td>Elapse date</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {% for key, value in bugs.items %}
+                    <tr>
+                        <td>{{ value.id_bug }}</td>
+                        <td>{{ value.description }}</td>
+                        <td>{{ value.priority }}</td>
+                        <td>{{ value.assigned_to }}</td>
+                        <td>{{ value.status }}</td>
+                        <td>{{ value.creation_date }}</td>
+                        <td>{{ value.elapse_date }}</td>
+                        <td><a href="">new child</a></td>
+                        <td><a href="">x</a></td>
+                        <td><a href="">open</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </article>
+{% endblock %}

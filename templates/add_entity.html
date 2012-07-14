@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <br>
+            <fieldset style="width:48%; float:left; margin-right: 3%;">
+                <label>Category</label>
+                <select style="width:92%;">
+                    <option>Articles</option>
+                    <option>Tutorials</option>
+                    <option>Freebies</option>
+                </select>
+            </fieldset>
+        </br>
+        <br>
+            <form action="add/" method="post">{% csrf_token %}
+                <p>Type of entity: </p>
+                <p>
+                    <p><input type="radio" name="type_of_entity" value="User Story"/> User Story </p>
+                    <p><input type="radio" name="type_of_entity" value="Task"/> Task </p>
+                    <input type="radio" name="type_of_entity" value="Bug"/> Bug
+                </p>
+                <p>Description: <input type="text" name="description"></p>
+                <p>Status: <input type="text" name="status"></p>
+                <p>Assign to: <input type="text" name="assign_to"></p>
+                <input type="submit" value="Add item">
+            </form>
+        </br>
+    </body>
+</html>

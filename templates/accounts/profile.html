@@ -1,0 +1,33 @@
+{% extends "loggedbase.html" %}
+{% block title_name %}Profile{% endblock %}
+
+{% block profile %}
+    <body>
+    <script src="../../media/scripts/script.js" type="text/javascript">
+    </script>
+        <article class="module width_full">
+            <header><h3>{{ uname }}</h3></header>
+            <div class="module_content">
+                <!--<h1>Header 1</h1>
+                <h2>Header 2</h2>
+                <h3>Header 3</h3>
+                <h4>Header 4</h4>-->
+                
+                <img src="../../media/images/user_foto.jpg"/>
+
+                <ul>
+                    <li>Email & Phone: {{ email }}</li>
+                    <li>Current position: GlobalLogic (Brady-LM project) as C#.net sr. Developer/Lead</li>
+                    <li>Education:
+                            Donbas State Mechanical Engineering Academy
+                            Master, Automation technological processes and Computer science
+                            1999 – 2004
+                    </li>
+                    <li>Last login: {{ ll }}</li>
+                    <li>Date joined: {{ dj }}</li>
+                </ul>
+            </div>
+        </article><!-- end of styles article -->
+
+    </body>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/media/css/styles.css" type="text/css" />
+</head>
+
+<body>
+    <header id="header">
+        <hgroup>
+            <h1 class="site_title"><img src="/media/images/logo.jpg" height="20"/> Just In SCRUM</h1>
+            <h2 class="section_title">{% block title_name %}{% endblock %}</h2>
+            <div class="btn_view_site">
+                <form class="quick_search">
+                    <input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+                </form>
+            </div>
+        </hgroup>
+    </header>
+
+    <section id="secondary_bar">
+        {% block secondary_bar %}{% endblock %}
+    </section>
+
+    <aside id="sidebar" class="column">
+        {% block auth_bar %}{% endblock %}
+        {% block user_specific %}{% endblock %}
+    <hr>
+        <footer>
+            <p><strong>Copyright &copy; 2011 K-labs Research Group</strong></p>
+        </footer>
+    </aside>
+
+    <section id="main" class="column">
+        {% block context %}{% endblock %}
+        {% block about %}{% endblock %}
+        {% block headerline %}{% endblock %}
+    </section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block secondary_bar %}
+    <div class="user">
+        <p>{{uname}} (<a href="#">0 Messages</a>) <a href="../../accounts/logout/" >Logout</a></p>
+    </div>
+{% endblock %}
+
+{% block about %}{% endblock %}
+
+{% block context %}
+    <div id="content">
+        {% block profile %}{% endblock %}
+        {% block board %}{% endblock %}
+        {% block dash %}{% endblock %}
+        {% block diagrams %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block user_specific %}
+    <div id="left">
+        <h3>Pages</h3>
+        <ul>
+            <li><a href="../../accounts/profile">Profile</a></li>
+            <li><a href="../../scrum_board/">SCRUM-Board</a></li>
+            <li><a href="../../dash_board/">Dashboard</a></li>
+            <li><a href="../../diagrams/">Diagrams</a></li>
+        </ul>
+        {% block actions %}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block auth_bar %}
+    <form id="auth_form" action="" method="post">{% csrf_token %}
+        <table>
+            <tr>
+                <td><label for="username">User: </label></td><td><input type="text" name="username" value="" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password: </label></td><td><input type="password" name="password" value="" id="password"></td>
+                <td><input type="submit" value="login" /></td>
+            </tr>
+        </table>
+        <input type="hidden" name="next" value="../../dash_board"/>
+    </form>
+{% endblock %}
+
+{% block about %}
+    <p>
+        Scrum is an iterative, incremental framework for project management often seen in agile software development,
+        a type of software engineering.
+        Although the Scrum approach was originally suggested for managing product development projects, its use has focused
+        on the management of software development projects, and it can be used to run software maintenance teams or
+        as a general project/program management approach.
+    </p>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/5/58/Scrum_process.svg" height="200">
+    <p>
+    History
+</p>
+<p>In 1986, Hirotaka Takeuchi and Ikujiro Nonaka described a new approach to commercial product development that would
+        increase speed and flexibility, based on case studies from manufacturing firms in the automotive, computer,
+        photocopier, and printer industries.[1] They called this the holistic or rugby approach, as the whole process
+        is performed by one cross-functional team across multiple overlapping phases, where the team "tries to go the
+        distance as a unit, passing the ball back and forth".</p>
+<p>In 1991, DeGrace and Stahl first referred to this as the scrum approach In rugby, a scrum refers to the manner of
+        restarting the game after a minor infraction. In the early 1990s, Ken Schwaber used such an approach at his
+        company, Advanced Development Methods, and Jeff Sutherland, with John Scumniotales and Jeff McKenna, developed
+        a similar approach at Easel Corporation, and were the first to refer to it using the single word Scrum.
+<p>In 1995, Sutherland and Schwaber jointly presented a paper describing the Scrum methodology at the Business Object
+        Design and Implementation Workshop held as part of OOPSLA ’95 in Austin, Texas, its first public presentation.
+        Schwaber and Sutherland collaborated during the following years to merge the above writings, their experiences,
+        and industry best practices into what is now known as Scrum.</p>
+<p>In 2001, Schwaber teamed up with Mike Beedle to describe the method in the book Agile Software Development with Scrum.
+Although the word is not an acronym, some companies implementing the process have been known to spell it with capital
+        letters as SCRUM. This may be due to one of Ken Schwaber’s early papers, which capitalized SCRUM in the title.
+    </p>
+{% endblock %}
